@@ -82,7 +82,10 @@ lazy_static::lazy_static! {
         HashMap::from([("disable-installation".to_owned(), "Y".to_owned())])
     );
     pub static ref BUILTIN_SETTINGS: RwLock<HashMap<String, String>> = RwLock::new(
-        HashMap::from([("register-device".to_owned(), "N".to_owned())])
+        HashMap::from([
+            ("register-device".to_owned(), "N".to_owned()),
+            ("hide-server-settings".to_owned(), "Y".to_owned()),
+        ])
     );
 }
 
